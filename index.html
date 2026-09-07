@@ -6,56 +6,61 @@
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
+  <meta name="theme-color" content="#0a0c0f">
+
+  <!-- PWA / App -->
+  <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="מי אחד עד">
 
-  <!-- אייקון האפליקציה בלבד -->
-  <link rel="apple-touch-icon" href="app-icon.png">
-  <link rel="icon" type="image/png" href="app-icon.png">
+  <!-- ICON -->
+  <link rel="icon" type="image/png" href="./app-icon.png">
+  <link rel="apple-touch-icon" href="./app-icon.png">
 
-  <!-- PWA -->
-  <link rel="manifest" href="manifest.json">
-
-  <meta name="theme-color" content="#0a0c0f">
+  <!-- Manifest -->
+  <link rel="manifest" href="./manifest.json">
 
   <title>מי אחד עד</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root{
-      --ink: #0a0c0f;
-      --ink-2: #12151a;
-      --panel: #1d2127;
-      --panel-edge: #2a2f37;
-      --well: #0e1013;
-      --brass: #c9a24b;
-      --brass-light: #f0d488;
-      --brass-dark: #8a6f2a;
-      --cream: #f2ede1;
-      --muted: #838c98;
-      --danger: #e08585;
+      --ink:#0a0c0f;
+      --ink-2:#12151a;
+      --panel:#1d2127;
+      --panel-edge:#2a2f37;
+      --well:#0e1013;
+      --brass:#c9a24b;
+      --brass-light:#f0d488;
+      --brass-dark:#8a6f2a;
+      --cream:#f2ede1;
+      --muted:#838c98;
+      --danger:#e08585;
     }
 
     *{
-      box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+      box-sizing:border-box;
+      -webkit-tap-highlight-color:transparent;
     }
 
     html,
     body{
-      height: 100%;
-      margin: 0;
-      overscroll-behavior: none;
+      width:100%;
+      height:100%;
+      margin:0;
+      overscroll-behavior:none;
     }
 
     body{
-      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-family:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
 
       background:
         radial-gradient(
@@ -74,65 +79,65 @@
           var(--ink-2)
         );
 
-      color: var(--cream);
+      color:var(--cream);
 
-      min-height: 100vh;
+      min-height:100vh;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display:flex;
+      align-items:center;
+      justify-content:center;
 
       padding:
-        max(24px, env(safe-area-inset-top))
+        max(24px,env(safe-area-inset-top))
         18px
-        max(24px, env(safe-area-inset-bottom));
+        max(24px,env(safe-area-inset-bottom));
     }
 
     .stage{
-      width: 100%;
-      max-width: 440px;
+      width:100%;
+      max-width:440px;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
 
-      gap: 28px;
+      gap:28px;
     }
 
     .heading{
-      text-align: center;
+      text-align:center;
 
-      display: flex;
-      flex-direction: column;
+      display:flex;
+      flex-direction:column;
 
-      gap: 4px;
+      gap:4px;
     }
 
     .heading h1{
-      margin: 0;
+      margin:0;
 
-      font-size: 21px;
-      font-weight: 800;
+      font-size:21px;
+      font-weight:800;
 
-      letter-spacing: 0.2px;
+      letter-spacing:.2px;
 
-      color: var(--cream);
+      color:var(--cream);
     }
 
     .heading p{
-      margin: 0;
+      margin:0;
 
-      font-size: 13.5px;
+      font-size:13.5px;
 
-      color: var(--muted);
+      color:var(--muted);
 
-      line-height: 1.5;
+      line-height:1.5;
     }
 
-    /* ---------- Machine ---------- */
+    /* MACHINE */
 
     .machine{
-      width: 100%;
+      width:100%;
 
       background:
         linear-gradient(
@@ -141,67 +146,67 @@
           #171a1f
         );
 
-      border: 1px solid var(--panel-edge);
+      border:1px solid var(--panel-edge);
 
-      border-radius: 22px;
+      border-radius:22px;
 
-      padding: 22px 16px 26px;
+      padding:22px 16px 26px;
 
       box-shadow:
-        0 20px 50px rgba(0,0,0,0.45),
-        inset 0 1px 0 rgba(255,255,255,0.04);
+        0 20px 50px rgba(0,0,0,.45),
+        inset 0 1px 0 rgba(255,255,255,.04);
 
-      position: relative;
+      position:relative;
     }
 
     .machine::before{
-      content: "";
+      content:"";
 
-      position: absolute;
+      position:absolute;
 
-      top: 10px;
-      left: 10px;
-      right: 10px;
-      bottom: 10px;
+      top:10px;
+      left:10px;
+      right:10px;
+      bottom:10px;
 
-      border: 1px solid rgba(255,255,255,0.03);
+      border:1px solid rgba(255,255,255,.03);
 
-      border-radius: 16px;
+      border-radius:16px;
 
-      pointer-events: none;
+      pointer-events:none;
     }
 
     .reel-well{
-      background: var(--well);
+      background:var(--well);
 
-      border-radius: 14px;
+      border-radius:14px;
 
-      padding: 14px 10px;
+      padding:14px 10px;
 
       box-shadow:
-        inset 0 3px 10px rgba(0,0,0,0.6),
-        inset 0 -2px 6px rgba(0,0,0,0.4);
+        inset 0 3px 10px rgba(0,0,0,.6),
+        inset 0 -2px 6px rgba(0,0,0,.4);
 
-      display: flex;
-      justify-content: center;
+      display:flex;
+      justify-content:center;
     }
 
     .reel-row{
-      direction: ltr;
+      direction:ltr;
 
-      display: flex;
-      align-items: center;
+      display:flex;
+      align-items:center;
 
-      gap: 4px;
+      gap:4px;
     }
 
     .reel-gap{
-      width: 8px;
+      width:8px;
     }
 
     .reel{
-      width: 34px;
-      height: 54px;
+      width:34px;
+      height:54px;
 
       background:
         linear-gradient(
@@ -210,254 +215,264 @@
           #0c0d10
         );
 
-      border-radius: 5px;
+      border-radius:5px;
 
-      overflow: hidden;
+      overflow:hidden;
 
-      position: relative;
+      position:relative;
 
       box-shadow:
-        0 0 0 1px rgba(255,255,255,0.03),
-        inset 0 1px 3px rgba(0,0,0,0.7);
+        0 0 0 1px rgba(255,255,255,.03),
+        inset 0 1px 3px rgba(0,0,0,.7);
     }
 
     .reel::after{
-      content: "";
+      content:"";
 
-      position: absolute;
+      position:absolute;
 
-      left: 0;
-      right: 0;
+      left:0;
+      right:0;
 
-      top: 50%;
+      top:50%;
 
-      height: 1px;
+      height:1px;
 
-      background: rgba(0,0,0,0.55);
+      background:rgba(0,0,0,.55);
 
       box-shadow:
-        0 1px 0 rgba(255,255,255,0.04);
+        0 1px 0 rgba(255,255,255,.04);
 
-      z-index: 2;
+      z-index:2;
     }
 
     .reel::before{
-      content: "";
+      content:"";
 
-      position: absolute;
+      position:absolute;
 
-      inset: 0;
+      inset:0;
 
       background:
         linear-gradient(
           180deg,
-          rgba(0,0,0,0.45),
+          rgba(0,0,0,.45),
           transparent 25%,
           transparent 75%,
-          rgba(0,0,0,0.45)
+          rgba(0,0,0,.45)
         );
 
-      z-index: 2;
+      z-index:2;
 
-      pointer-events: none;
+      pointer-events:none;
     }
 
     .reel-strip{
-      display: flex;
-      flex-direction: column;
+      display:flex;
 
-      will-change: transform;
+      flex-direction:column;
+
+      will-change:transform;
     }
 
     .reel-digit{
-      height: 54px;
+      height:54px;
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display:flex;
 
-      font-family: 'Space Mono', monospace;
+      align-items:center;
+      justify-content:center;
 
-      font-size: 30px;
-      font-weight: 700;
+      font-family:'Space Mono',monospace;
 
-      color: var(--cream);
+      font-size:30px;
 
-      font-variant-numeric: tabular-nums;
+      font-weight:700;
+
+      color:var(--cream);
+
+      font-variant-numeric:tabular-nums;
     }
 
     .reel.spinning .reel-digit{
-      filter: blur(1.5px);
+      filter:blur(1.5px);
     }
 
     .placeholder-row{
-      direction: ltr;
+      direction:ltr;
 
-      font-family: 'Space Mono', monospace;
+      font-family:'Space Mono',monospace;
 
-      font-size: 26px;
+      font-size:26px;
 
-      letter-spacing: 6px;
+      letter-spacing:6px;
 
-      color: #454c56;
+      color:#454c56;
 
-      padding: 12px 0;
+      padding:12px 0;
     }
 
     .readout{
-      text-align: center;
+      text-align:center;
 
-      margin-top: 14px;
+      margin-top:14px;
 
-      min-height: 20px;
+      min-height:20px;
 
-      font-size: 14px;
+      font-size:14px;
 
-      color: var(--muted);
+      color:var(--muted);
 
-      opacity: 0;
+      opacity:0;
 
-      transform: translateY(4px);
+      transform:translateY(4px);
 
       transition:
-        opacity 0.35s ease,
-        transform 0.35s ease;
+        opacity .35s ease,
+        transform .35s ease;
     }
 
     .readout.show{
-      opacity: 1;
-      transform: translateY(0);
+      opacity:1;
+      transform:translateY(0);
     }
 
     .readout b{
-      color: var(--brass-light);
-      font-weight: 700;
+      color:var(--brass-light);
+
+      font-weight:700;
     }
 
-    /* ---------- Controls ---------- */
+    /* CONTROLS */
 
     .controls{
-      width: 100%;
+      width:100%;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      display:flex;
 
-      gap: 18px;
+      flex-direction:column;
+
+      align-items:center;
+
+      gap:18px;
     }
 
     .field{
-      width: 100%;
+      width:100%;
 
-      display: flex;
-      flex-direction: column;
+      display:flex;
 
-      gap: 7px;
+      flex-direction:column;
+
+      gap:7px;
     }
 
     .field label{
-      font-size: 13px;
+      font-size:13px;
 
-      color: var(--muted);
+      color:var(--muted);
 
-      padding: 0 2px;
+      padding:0 2px;
     }
 
     .field input{
-      width: 100%;
+      width:100%;
 
-      padding: 15px 16px;
+      padding:15px 16px;
 
-      font-size: 18px;
-      font-weight: 600;
+      font-size:18px;
 
-      text-align: center;
+      font-weight:600;
 
-      border-radius: 13px;
+      text-align:center;
 
-      border: 1px solid var(--panel-edge);
+      border-radius:13px;
 
-      background: var(--panel);
+      border:1px solid var(--panel-edge);
 
-      color: var(--cream);
+      background:var(--panel);
 
-      outline: none;
+      color:var(--cream);
 
-      direction: ltr;
+      outline:none;
 
-      font-family: 'Space Mono', monospace;
+      direction:ltr;
 
-      transition: border-color 0.2s ease;
+      font-family:'Space Mono',monospace;
+
+      transition:border-color .2s ease;
     }
 
     .field input:focus{
-      border-color: var(--brass);
+      border-color:var(--brass);
     }
 
     .field input::placeholder{
-      color: #565d67;
+      color:#565d67;
 
-      font-family: 'Manrope', sans-serif;
+      font-family:'Manrope',sans-serif;
 
-      font-weight: 500;
+      font-weight:500;
 
-      font-size: 14px;
+      font-size:14px;
     }
 
     .error{
-      min-height: 16px;
+      min-height:16px;
 
-      font-size: 12.5px;
+      font-size:12.5px;
 
-      color: var(--danger);
+      color:var(--danger);
 
-      text-align: center;
+      text-align:center;
     }
 
-    /* ---------- Lever ---------- */
+    /* LEVER */
 
     .lever-btn{
-      background: none;
+      background:none;
 
-      border: none;
+      border:none;
 
-      padding: 0;
+      padding:0;
 
-      cursor: pointer;
+      cursor:pointer;
 
-      display: flex;
-      flex-direction: column;
+      display:flex;
 
-      align-items: center;
+      flex-direction:column;
 
-      gap: 10px;
+      align-items:center;
+
+      gap:10px;
     }
 
     .lever-btn:disabled{
-      cursor: default;
+      cursor:default;
 
-      opacity: 0.55;
+      opacity:.55;
     }
 
     .lever-assembly{
-      position: relative;
+      position:relative;
 
-      width: 52px;
-      height: 100px;
+      width:52px;
+
+      height:100px;
     }
 
     .lever-track{
-      position: absolute;
+      position:absolute;
 
-      left: 50%;
-      top: 0;
+      left:50%;
+      top:0;
 
-      transform: translateX(-50%);
+      transform:translateX(-50%);
 
-      width: 12px;
-      height: 100%;
+      width:12px;
+      height:100%;
 
-      border-radius: 7px;
+      border-radius:7px;
 
       background:
         linear-gradient(
@@ -468,22 +483,22 @@
         );
 
       box-shadow:
-        inset 0 2px 4px rgba(0,0,0,0.8),
-        inset 0 0 0 1px rgba(255,255,255,0.04);
+        inset 0 2px 4px rgba(0,0,0,.8),
+        inset 0 0 0 1px rgba(255,255,255,.04);
     }
 
     .lever-knob{
-      position: absolute;
+      position:absolute;
 
-      left: 50%;
-      top: 0;
+      left:50%;
+      top:0;
 
-      width: 50px;
-      height: 50px;
+      width:50px;
+      height:50px;
 
-      border-radius: 50%;
+      border-radius:50%;
 
-      transform: translate(-50%, 0);
+      transform:translateX(-50%);
 
       background:
         radial-gradient(
@@ -494,49 +509,49 @@
         );
 
       box-shadow:
-        0 6px 14px rgba(0,0,0,0.55),
-        inset 0 1px 2px rgba(255,255,255,0.5),
-        inset 0 -3px 6px rgba(0,0,0,0.35);
+        0 6px 14px rgba(0,0,0,.55),
+        inset 0 1px 2px rgba(255,255,255,.5),
+        inset 0 -3px 6px rgba(0,0,0,.35);
 
       transition:
-        top 0.42s cubic-bezier(0.34, 1.56, 0.64, 1);
+        top .42s cubic-bezier(.34,1.56,.64,1);
     }
 
     .lever-btn.pulled .lever-knob{
-      top: 50px;
+      top:50px;
 
       transition:
-        top 0.14s cubic-bezier(0.5, 0, 1, 0.4);
+        top .14s cubic-bezier(.5,0,1,.4);
     }
 
     .lever-label{
-      font-size: 13px;
+      font-size:13px;
 
-      font-weight: 700;
+      font-weight:700;
 
-      color: var(--brass-light);
+      color:var(--brass-light);
 
-      letter-spacing: 0.3px;
+      letter-spacing:.3px;
     }
 
     .hint{
-      font-size: 12px;
+      font-size:12px;
 
-      color: var(--muted);
+      color:var(--muted);
 
-      opacity: 0.65;
+      opacity:.65;
 
-      text-align: center;
+      text-align:center;
     }
 
-    @media (prefers-reduced-motion: reduce){
+    @media (prefers-reduced-motion:reduce){
 
       .reel-strip{
-        transition: none !important;
+        transition:none!important;
       }
 
       .lever-knob{
-        transition: none !important;
+        transition:none!important;
       }
     }
   </style>
@@ -557,7 +572,10 @@
 
         <div class="reel-row" id="reelRow">
 
-          <div class="placeholder-row" id="placeholderRow">
+          <div
+            class="placeholder-row"
+            id="placeholderRow"
+          >
             - - - - -
           </div>
 
@@ -565,7 +583,10 @@
 
       </div>
 
-      <div class="readout" id="readout">
+      <div
+        class="readout"
+        id="readout"
+      >
         התוצאה:
         <b id="readoutNumber"></b>
       </div>
@@ -592,7 +613,10 @@
 
       </div>
 
-      <div class="error" id="errorMsg"></div>
+      <div
+        class="error"
+        id="errorMsg"
+      ></div>
 
       <button
         class="lever-btn"
@@ -626,14 +650,26 @@
   <script>
     (function(){
 
-      const maxInput = document.getElementById('maxInput');
-      const leverBtn = document.getElementById('leverBtn');
-      const reelRow = document.getElementById('reelRow');
-      const placeholderRow = document.getElementById('placeholderRow');
+      const maxInput =
+        document.getElementById('maxInput');
 
-      const errorMsg = document.getElementById('errorMsg');
-      const readout = document.getElementById('readout');
-      const readoutNumber = document.getElementById('readoutNumber');
+      const leverBtn =
+        document.getElementById('leverBtn');
+
+      const reelRow =
+        document.getElementById('reelRow');
+
+      const placeholderRow =
+        document.getElementById('placeholderRow');
+
+      const errorMsg =
+        document.getElementById('errorMsg');
+
+      const readout =
+        document.getElementById('readout');
+
+      const readoutNumber =
+        document.getElementById('readoutNumber');
 
       let spinning = false;
 
@@ -642,30 +678,42 @@
           '(prefers-reduced-motion: reduce)'
         ).matches;
 
-      /* ---------- Input ---------- */
+      /* INPUT */
 
-      maxInput.addEventListener('input', () => {
+      maxInput.addEventListener(
+        'input',
+        () => {
 
-        maxInput.value =
-          maxInput.value.replace(/[^0-9]/g, '');
-
-      });
-
-      maxInput.addEventListener('keydown', (e) => {
-
-        if(e.key === 'Enter'){
-
-          maxInput.blur();
-
-          pull();
+          maxInput.value =
+            maxInput.value.replace(
+              /[^0-9]/g,
+              ''
+            );
 
         }
+      );
 
-      });
+      maxInput.addEventListener(
+        'keydown',
+        (e) => {
 
-      leverBtn.addEventListener('click', pull);
+          if(e.key === 'Enter'){
 
-      /* ---------- Pull ---------- */
+            maxInput.blur();
+
+            pull();
+
+          }
+
+        }
+      );
+
+      leverBtn.addEventListener(
+        'click',
+        pull
+      );
+
+      /* RANDOM */
 
       function pull(){
 
@@ -675,7 +723,8 @@
 
         errorMsg.textContent = '';
 
-        const raw = maxInput.value.trim();
+        const raw =
+          maxInput.value.trim();
 
         if(raw === ''){
 
@@ -685,9 +734,13 @@
           return;
         }
 
-        const max = parseInt(raw, 10);
+        const max =
+          parseInt(raw,10);
 
-        if(Number.isNaN(max) || max < 1){
+        if(
+          Number.isNaN(max) ||
+          max < 1
+        ){
 
           errorMsg.textContent =
             'נא להזין מספר גדול מ-0';
@@ -704,36 +757,56 @@
         }
 
         const result =
-          Math.floor(Math.random() * max) + 1;
+          Math.floor(
+            Math.random() * max
+          ) + 1;
 
         const digitCount =
           String(max).length;
 
         const digits =
           String(result)
-            .padStart(digitCount, '0')
+            .padStart(
+              digitCount,
+              '0'
+            )
             .split('');
 
-        spinAnimation(digits, result);
+        spinAnimation(
+          digits,
+          result
+        );
       }
 
-      /* ---------- Animation ---------- */
+      /* ANIMATION */
 
-      function spinAnimation(digits, result){
+      function spinAnimation(
+        digits,
+        result
+      ){
 
         spinning = true;
 
         leverBtn.disabled = true;
 
-        leverBtn.classList.add('pulled');
+        leverBtn.classList.add(
+          'pulled'
+        );
 
-        readout.classList.remove('show');
+        readout.classList.remove(
+          'show'
+        );
 
-        setTimeout(() => {
+        setTimeout(
+          () => {
 
-          leverBtn.classList.remove('pulled');
+            leverBtn.classList.remove(
+              'pulled'
+            );
 
-        }, 160);
+          },
+          160
+        );
 
         if(placeholderRow.parentNode){
 
@@ -743,7 +816,8 @@
 
         reelRow.innerHTML = '';
 
-        const n = digits.length;
+        const n =
+          digits.length;
 
         const reelEls = [];
 
@@ -751,92 +825,117 @@
 
         const stepDuration = 190;
 
-        digits.forEach((digit, i) => {
+        digits.forEach(
+          (digit,i) => {
 
-          /* מפריד אלפים */
+            const fromRight =
+              n - 1 - i;
 
-          const fromRight =
-            n - 1 - i;
+            if(
+              i !== 0 &&
+              fromRight % 3 === 2
+            ){
 
-          if(
-            i !== 0 &&
-            fromRight % 3 === 2
-          ){
+              const gap =
+                document.createElement(
+                  'div'
+                );
 
-            const gap =
-              document.createElement('div');
+              gap.className =
+                'reel-gap';
 
-            gap.className =
-              'reel-gap';
-
-            reelRow.appendChild(gap);
-
-          }
-
-          const reel =
-            document.createElement('div');
-
-          reel.className =
-            'reel spinning';
-
-          const strip =
-            document.createElement('div');
-
-          strip.className =
-            'reel-strip';
-
-          const loops =
-            3 + (i % 3);
-
-          for(let l = 0; l < loops; l++){
-
-            for(let d = 0; d < 10; d++){
-
-              const cell =
-                document.createElement('div');
-
-              cell.className =
-                'reel-digit';
-
-              cell.textContent = d;
-
-              strip.appendChild(cell);
+              reelRow.appendChild(gap);
 
             }
 
+            const reel =
+              document.createElement(
+                'div'
+              );
+
+            reel.className =
+              'reel spinning';
+
+            const strip =
+              document.createElement(
+                'div'
+              );
+
+            strip.className =
+              'reel-strip';
+
+            const loops =
+              3 + (i % 3);
+
+            for(
+              let l = 0;
+              l < loops;
+              l++
+            ){
+
+              for(
+                let d = 0;
+                d < 10;
+                d++
+              ){
+
+                const cell =
+                  document.createElement(
+                    'div'
+                  );
+
+                cell.className =
+                  'reel-digit';
+
+                cell.textContent = d;
+
+                strip.appendChild(
+                  cell
+                );
+
+              }
+
+            }
+
+            const finalCell =
+              document.createElement(
+                'div'
+              );
+
+            finalCell.className =
+              'reel-digit';
+
+            finalCell.textContent =
+              digit;
+
+            strip.appendChild(
+              finalCell
+            );
+
+            reel.appendChild(
+              strip
+            );
+
+            reelRow.appendChild(
+              reel
+            );
+
+            reelEls.push({
+
+              reel,
+              strip,
+
+              duration:
+                baseDuration +
+                i * stepDuration,
+
+              totalItems:
+                loops * 10 + 1
+
+            });
+
           }
-
-          const finalCell =
-            document.createElement('div');
-
-          finalCell.className =
-            'reel-digit';
-
-          finalCell.textContent =
-            digit;
-
-          strip.appendChild(finalCell);
-
-          reel.appendChild(strip);
-
-          reelRow.appendChild(reel);
-
-          reelEls.push({
-
-            reel,
-            strip,
-
-            duration:
-              baseDuration + i * stepDuration,
-
-            totalItems:
-              loops * 10 + 1
-
-          });
-
-        });
-
-        /* Reflow */
+        );
 
         void reelRow.offsetHeight;
 
@@ -880,32 +979,60 @@
           }
         );
 
-        setTimeout(() => {
+        setTimeout(
+          () => {
 
-          reelEls.forEach(
-            ({ reel }) => {
+            reelEls.forEach(
+              ({reel}) => {
 
-              reel.classList.remove(
-                'spinning'
+                reel.classList.remove(
+                  'spinning'
+                );
+
+              }
+            );
+
+            readoutNumber.textContent =
+              result.toLocaleString(
+                'en-US'
               );
 
-            }
-          );
+            readout.classList.add(
+              'show'
+            );
 
-          readoutNumber.textContent =
-            result.toLocaleString('en-US');
+            spinning = false;
 
-          readout.classList.add('show');
+            leverBtn.disabled = false;
 
-          spinning = false;
-
-          leverBtn.disabled = false;
-
-        }, maxDuration + 80);
+          },
+          maxDuration + 80
+        );
 
       }
 
     })();
+
+    /* Service Worker */
+
+    if(
+      'serviceWorker' in navigator
+    ){
+
+      window.addEventListener(
+        'load',
+        () => {
+
+          navigator.serviceWorker.register(
+            './sw.js'
+          ).catch(
+            () => {}
+          );
+
+        }
+      );
+
+    }
   </script>
 
 </body>
