@@ -1,4 +1,3 @@
-```javascript
 const CACHE_NAME = "mi-echad-ad-v1";
 
 const FILES = [
@@ -39,4 +38,4 @@ self.addEventListener("fetch", event => {
     })
   );
 });
-```
+
