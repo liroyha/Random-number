@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="מכונת ההגרלה">
-<title>מכונת ההגרלה</title>
+<meta name="apple-mobile-web-app-title" content="מי אחר עד">
+<title>מי אחד עד</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -338,8 +338,8 @@
 <div class="stage">
 
   <div class="heading">
-    <h1>מכונת ההגרלה</h1>
-    <p>קבע גבול עליון, משוך את הידית, וקבל מספר אקראי מ-1 ועד הגבול שבחרת</p>
+    <h1>מי אחד עד</h1>
+    <p>בחר מספר מי אחד עד ומשוך לתוצאה</p>
   </div>
 
   <div class="machine">
@@ -363,11 +363,11 @@
         <div class="lever-track"></div>
         <div class="lever-knob"></div>
       </div>
-      <span class="lever-label">משוך להגרלה</span>
+      <span class="lever-label">משוך </span>
     </button>
   </div>
 
-  <div class="hint">טווח מקסימלי: 1,000,000</div>
+  <div class="hint">מספר מקסימלי: 1,000,000</div>
 
 </div>
 
@@ -411,7 +411,7 @@
     const max = parseInt(raw, 10);
 
     if (isNaN(max) || max < 1){
-      errorMsg.textContent = 'נא להזין מספר תקין גדול מ-0';
+      errorMsg.textContent = 'נא להזין מספר גדול מ-0';
       return;
     }
 
